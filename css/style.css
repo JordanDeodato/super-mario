@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Mario';
+    src: url('/fonts/Super-Mario-World.ttf');
+ }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/images/ground.png');
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.contador {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    font-size: 25px;
+    font-family: 'Mario';
+    font-weight: 100;
+    text-shadow: 1px 1px 1px #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.contador .counter {
+    font-size: 40px;
+    margin-left: 15px;
+}
+
+.coin {
+    width: 45px;
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+.play-again {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    left: 46%;
+    top: 40%;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: 'Mario';
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play-again:hover {
+    background-color: #0000003b;
+    transition: 0.2s;
+}
+
+.play-again img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.hidden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    left: 46%;
+    top: 40%;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: 'Mario';
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    left: 46%;
+    top: 40%;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: 'Mario';
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+
+    40% {
+        bottom: 200px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
