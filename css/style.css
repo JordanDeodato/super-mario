@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: url('/images/ground.png');
+    background-image: url('https://github.com/JordanDeodato/super-mario/blob/main/images/ground.png?raw=true');
 }
 
 .game-board {
